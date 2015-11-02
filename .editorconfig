@@ -1,0 +1,21 @@
+# top-most EditorConfig file
+root = true
+
+# Unix-style newlines with a newline ending every file
+[*]
+charset = utf-8
+end_of_line = lf
+indent_style = space
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+## 2 space indentation
+[*.{js,json}]
+indent_size = 2
+
+[*.{js}]
+indent_brace_style = K&R
+
+# Markdown Trailing Whitespace
+[*.md]
+trim_trailing_whitespace = false

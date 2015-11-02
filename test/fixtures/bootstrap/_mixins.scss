@@ -1,0 +1,4 @@
+// Mixins
+@mixin text-variant($text-color) {
+  color: $text-color;
+}

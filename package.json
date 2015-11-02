@@ -1,0 +1,48 @@
+{
+  "name": "grunt-copy-imports",
+  "description": "Copy files and make @import directives relative to the destination file.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/vincent-mendiola/grunt-copy-imports",
+  "author": {
+    "name": "Vincent Mendiola II",
+    "email": "contact@vincentmendiola.com",
+    "url": "http://vincentmendiola.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vincent-mendiola/grunt-copy-imports.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vincent-mendiola/grunt-copy-imports/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/vincent-mendiola/grunt-copy-imports/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.12.4"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-jshint": "~0.9.2",
+    "grunt-contrib-nodeunit": "~0.3.3",
+    "grunt-contrib-sass": "~0.9.2"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.5"
+  },
+  "keywords": [
+    "gruntplugin",
+    "copy",
+    "imports"
+  ],
+  "dependencies": {
+    "chalk": "~1.1.1"
+  }
+}
