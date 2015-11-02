@@ -60,6 +60,7 @@ module.exports = function(grunt) {
 
     sass: {
       options: {
+        noCache: true,
         sourcemap: "none"
       },
       default_options: {
