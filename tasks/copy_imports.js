@@ -22,7 +22,6 @@ module.exports = function(grunt) {
 
     var imports = '',
       styleRules = '',
-      matched = '',
       output = '';
 
     // Iterate over all specified file groups.
@@ -45,6 +44,11 @@ module.exports = function(grunt) {
         // Read file source.
         var src = grunt.file.read(options.basePath + filepath);
 
+        // Copy the style rules.
+        if (options.styles) {
+          styleRules += src.replace(regex, '');
+        }
+
         // Replace file path with relative file path.
         src.replace(regex, function(match, text) {
           var updatedPath = path.relative(destDir, fileDir + '/' + text);
@@ -54,28 +58,20 @@ module.exports = function(grunt) {
             return;
           // Handle all files.
           } else if (!options.exclude) {
-            matched = match;
             imports += match.replace(text, path.relative(destDir, fileDir + '/' + text));
           } else {
             // Remove excluded files.
             if (Array.isArray(options.exclude)) {
               if (options.exclude.indexOf(text.split('/').pop()) === -1) {
-                matched = match;
                 imports += match.replace(text, updatedPath);
               }
             } else if (!options.exclude.hasOwnProperty(filepath) || (options.exclude.hasOwnProperty(filepath) && options.exclude[filepath].indexOf(text.split('/').pop()) === -1)) {
               if (!options.exclude.hasOwnProperty('*') || (options.exclude.hasOwnProperty('*') && options.exclude['*'].indexOf(text.split('/').pop()) === -1)) {
-                matched = match;
                 imports += match.replace(text, updatedPath);
               }
             }
           }
         });
-
-        // Copy the style rules.
-        if (options.styles) {
-          styleRules += src.substring(src.indexOf(matched) + matched.length);
-        }
       });
 
       // Concatenate the style rules and the imports.
