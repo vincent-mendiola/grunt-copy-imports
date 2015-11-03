@@ -112,4 +112,5 @@ grunt.initConfig({
 Feel free to contribute with issues or code.
 
 ## Release History
+* 2015-11-03    v0.1.1 - Fix style rules concatenation bug
 * 2015-11-02    v0.1.0 - Initial release
