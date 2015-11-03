@@ -1,7 +1,7 @@
 {
   "name": "grunt-copy-imports",
   "description": "Copy files and make @import directives relative to the destination file.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/vincent-mendiola/grunt-copy-imports",
   "author": {
     "name": "Vincent Mendiola II",
