@@ -81,7 +81,7 @@ grunt.initConfig({
       exclude: ['variables.scss']
     },
     files: {
-      'dest/simple_exclude.scss': ['src/_imports.scss','src/_imports-2.scss'],
+      'dest/simple_options.scss': ['src/_imports.scss','src/_imports-2.scss'],
     },
   },
 });
@@ -102,7 +102,7 @@ grunt.initConfig({
       styles: false
     },
     files: {
-      'dest/simple_exclude.scss': ['_imports.scss','_imports-2.scss'],
+      'dest/advanced_options.scss': ['_imports.scss','_imports-2.scss'],
     },
   },
 });
