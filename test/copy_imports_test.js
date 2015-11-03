@@ -55,6 +55,15 @@ exports.copy_imports = {
 
     test.done();
   },
+  styleRules: function(test) {
+    test.expect(1);
+
+    var actual = grunt.file.read('tmp/styleRules.scss');
+    var expected = grunt.file.read('test/expected/styleRules.scss');
+    test.equal(actual, expected, chalk.magenta('Expects the ' + chalk.red('_variables.scss') + ' import to be excluded from the ' + chalk.blue('styleRules.scss') + ' and it should concatenate the styles without the original import directives.'));
+
+    test.done();
+  },
   default_build: function(test) {
     test.expect(1);
 

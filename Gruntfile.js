@@ -55,6 +55,15 @@ module.exports = function(grunt) {
         files: {
           'tmp/advanced_options.scss': ['_bootstrap.scss','_bootstrap_extras.scss']
         }
+      },
+      styleRules: {
+        options: {
+          exclude: ['variables'],
+          basePath: 'test/fixtures/'
+        },
+        files: {
+          'tmp/styleRules.scss': ['_bootstrap.scss','bootstrap/_bootstrap_nested.scss']
+        }
       }
     },
 
